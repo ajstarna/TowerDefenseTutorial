@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
         if (waypoint_index >= Waypoints.points.Length)
         {
             Destroy(gameObject);
+            return; // return so that we do not attempt to find the next target out of range
         }
 
         target = Waypoints.points[waypoint_index];
