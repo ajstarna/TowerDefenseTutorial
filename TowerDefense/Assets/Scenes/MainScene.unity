@@ -3523,7 +3523,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 25
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -4914,6 +4914,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standard_turret_prefab: {fileID: 1622182142898836977, guid: d856b809b9b55584198d34b756e72098,
+    type: 3}
+  another_turret_prefab: {fileID: 1622182142898836977, guid: fa6b7d3c80e53154abe68c541627f169,
     type: 3}
 --- !u!1001 &448450478
 PrefabInstance:
