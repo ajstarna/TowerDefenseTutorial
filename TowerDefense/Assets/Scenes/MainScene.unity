@@ -3578,6 +3578,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ef9ce7f5bf97545bbb514ac7ff6e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standard_turret:
+    prefab: {fileID: 1622182142898836977, guid: d856b809b9b55584198d34b756e72098,
+      type: 3}
+    cost: 100
+  missile_launcher:
+    prefab: {fileID: 67748063878178755, guid: ee0be214346e63f4a987fb516dd139e9, type: 3}
+    cost: 250
 --- !u!1001 &264075669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4864,6 +4871,7 @@ GameObject:
   - component: {fileID: 443560693}
   - component: {fileID: 443560692}
   - component: {fileID: 443560694}
+  - component: {fileID: 443560695}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -4913,10 +4921,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76948b819d3f0874086c6e78da46d79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standard_turret_prefab: {fileID: 1622182142898836977, guid: d856b809b9b55584198d34b756e72098,
-    type: 3}
-  missile_launcher_prefab: {fileID: 67748063878178755, guid: ee0be214346e63f4a987fb516dd139e9,
-    type: 3}
+--- !u!114 &443560695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443560691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be5ca2c5c065cc48acf04379e7e2cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start_money: 400
 --- !u!1001 &448450478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5117,7 +5134,7 @@ PrefabInstance:
     - target: {fileID: 3574799629297546820, guid: f8f413eeadfc7a241b1605d73bd30346,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 3574799629297546820, guid: f8f413eeadfc7a241b1605d73bd30346,
         type: 3}
@@ -18958,9 +18975,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3574799629297546820, guid: f8f413eeadfc7a241b1605d73bd30346,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574799629297546820, guid: f8f413eeadfc7a241b1605d73bd30346,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 263024071}
+    - target: {fileID: 3574799629297546820, guid: f8f413eeadfc7a241b1605d73bd30346,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectStandardTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574799629297546820, guid: f8f413eeadfc7a241b1605d73bd30346,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8f413eeadfc7a241b1605d73bd30346, type: 3}
 --- !u!1001 &7390657647736516184
