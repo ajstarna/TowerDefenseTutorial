@@ -7,7 +7,7 @@ public class WaveSpawner : MonoBehaviour
     public Transform enemy_prefab;
     public Transform spawn_point;
 
-    public const float time_between_waves = 4.99f;
+    public const float time_between_waves = 19.99f;
 
     private float countdown = 2f;
 
@@ -24,8 +24,8 @@ public class WaveSpawner : MonoBehaviour
         }
 
         countdown -= Time.deltaTime;
-
-        wave_countdown_text.text = Mathf.Ceil(countdown).ToString();
+        countdown = Mathf.Clamp(countdown, 0, Mathf.Infinity);
+        wave_countdown_text.text = string.Format("{0:00.00}", countdown); // Mathf.Ceil(countdown).ToString());
     }
 
     IEnumerator SpawnWave ()

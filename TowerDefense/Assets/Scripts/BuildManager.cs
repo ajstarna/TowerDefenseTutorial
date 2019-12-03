@@ -21,10 +21,18 @@ public class BuildManager : MonoBehaviour
            }
     }
 
+    public bool HasEnoughMoney
+    {
+        get
+        {
+            return PlayerStats.money >= turret_to_build.cost;
+        }
+    }
+
     public void BuildTurretOn(Node node)
     {
 
-        if (PlayerStats.money < turret_to_build.cost)
+        if (!HasEnoughMoney)
         {
             Debug.Log("Not enough money to build that!");
             return;
